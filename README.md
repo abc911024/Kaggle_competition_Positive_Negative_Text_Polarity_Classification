@@ -12,7 +12,7 @@
 
 ## 流程總覽
 
-![Multi-Stage NLP Classification Pipeline](assets/pipeline_overview.png)
+![Multi-Stage NLP Classification Pipeline](image/pipeline_overview.png)
 
 整體 pipeline 分為 5 個階段：
 
@@ -52,7 +52,7 @@ Stage 1 最佳門檻為 0.635（偏離預設 0.5，反映模型對 Class 1 存�
 
 | 機率分佈比較 | Threshold vs F1 曲線 |
 | --- | --- |
-| ![Probability Distribution Comparison](assets/probability_distribution.png) | ![Threshold vs F1 Score](assets/threshold_vs_f1.png) |
+| ![Probability Distribution Comparison](image/probability_distribution.png) | ![Threshold vs F1 Score](image/threshold_vs_f1.png) |
 
 ## 4. 最終推論策略
 
@@ -62,7 +62,7 @@ Stage 1 最佳門檻為 0.635（偏離預設 0.5，反映模型對 Class 1 存�
 
 此策略的核心動機是**變異縮減（variance reduction）**：不同 Fold 因資料切分不同，表現本就會有波動（見下圖），透過機率平均達到類似 bagging 的集成效果，中和個別模型的偶發誤差，提升整體穩健性與泛化能力。
 
-![Fold-wise Accuracy Comparison](assets/foldwise_accuracy.png)
+![Fold-wise Accuracy Comparison](image/foldwise_accuracy.png)
 
 ## 5. 實驗結果與討論
 
